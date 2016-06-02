@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+    <script src="./TextWall.js"></script>
+    <style>
+      .wall {
+        height: 450px;
+        padding-top: 20px;
+        overflow: hidden;
+      }
+      .wall .text {
+        /*position: absolute;*/
+        display: inline-block;
+        float: left;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wall"></div>
+  </body>
+  <script>
+    var wall = $(".wall").textWall({
+      texts: ['JavaSciprt', 'ES6', 'babel', 'reactjs', 'react-native',
+      'angularjs', 'webpack', 'npm', 'nodejs', 'flux', 'redux', 'vue.js',
+      'jquery', 'ES7', 'typescript', 'D3.js', 'docker', 'bower', 'requirejs',
+      'gulp', 'grunt', 'eslint', 'go', 'python', 'java', 'laravel', 'jenkins',
+      'travis', 'mocha', 'git', 'github', 'rails', 'zk', 'ajax', 'nosql', 'atom',
+      'mongoDB', 'design pattern', 'sublime text', 'vscode', 'koajs', 'html5', 'css3',
+      'electron', 'Solr', 'socket.io', 'sass', 'less', 'jade', 'ElasticSearch', 'AWS',
+      'bootstrap', 'vim', 'emacs',
+      ],
+      test: function(str) {
+        alert(str + '_test');
+      },
+    });
+    console.log(wall);
+  </script>
+</html>
